@@ -50,11 +50,28 @@
                     placeholder="Tanggal"
                     required="required"
                     class="p-4 bg-gray-100 rounded-md"
-					id="date2"
-					min="2021-01-13" 
+					id="dateMin"
 					max="2022-01-28"
-					placeholder="YYYY-DD-MM"
+					placeholder="YYYY-MM-DD"
 				/>
+				
+				<script>
+					var today = new Date();
+					var dd = today.getDate();
+					var mm = today.getMonth() + 1; //January is 0!
+					var yyyy = today.getFullYear();
+
+					if (dd < 10) {
+					   dd = '0' + dd;
+					}
+
+					if (mm < 10) {
+					   mm = '0' + mm;
+					} 
+						
+					today = yyyy + '-' + mm + '-' + dd;
+					document.getElementById("dateMin").setAttribute("min", today);
+				</script>
 					
                 <button
                     type="submit"
@@ -113,7 +130,9 @@
                     Prediksi Capaian Vaksinasi-2 Covid-19 di Indonesia (Per-Tanggal: <b>{{ tanggal }}</b>)
                 </h1>
                 <h2 class="text-5xl font-bold">{{ prediksi }} atau {{ persen }} % </h2>
-					<p>Target pencapaian Vaksinasi (herd immunity) adalah lebih dari 208,265,720 atau 80% jumlah penduduk Indonesia</p>
+				<br>
+					<p>Target pencapaian Vaksinasi (herd immunity) adalah lebih dari 208,265,720 atau 80% jumlah penduduk Indonesia, 
+					tercapai pada tanggal <b> 2022-01-28 </b>, dengan capaian <b> 209,071,481 atau 80,31% </b></p>
                 {% if (prediksi) != 0 %}
                 {% endif %}
             </div>
