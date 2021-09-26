@@ -3,7 +3,6 @@
 Thematic Academy - Digital Talent Scholarship - Tahun 2021
 (Data Scientist: Artificial Intelligence untuk Dosen dan Instruktur)
 TUGAS AKHIR: “Pencapaian Target Vaksinasi Covid-19 di Indonesia”
-Wali Kelas: Nugraha Priya Utama, S.T., M.A., Ph.D. (utama@staff.stei.itb.ac.id)
 
 Kelas ITB07 – Kelompok 1:
 
